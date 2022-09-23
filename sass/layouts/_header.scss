@@ -5,3 +5,13 @@ header {
   padding: 0.2rem;
   position: relative;
 }
+.header_menu {
+  @include flexbox-row;
+  align-items: center;
+  justify-content: center;
+  a {
+    font-size: x-large;
+    position: relative;
+    right: 20%;
+  }
+}
