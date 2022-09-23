@@ -26,3 +26,7 @@
   align-items: center;
   flex-direction: row;
 }
+@mixin flexbox-column {
+  display: flex;
+  flex-direction: column;
+}
