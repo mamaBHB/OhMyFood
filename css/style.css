@@ -112,10 +112,10 @@ footer .footer_margin a i {
   margin-bottom: 4rem;
   font-weight: 500;
   counter-reset: steps;
+  white-space: nowrap;
 }
 .fonctionnement ol {
   display: flex;
-  flex-wrap: wrap;
   gap: 2rem;
 }
 @media screen and (max-width: 900px) {
@@ -125,7 +125,7 @@ footer .footer_margin a i {
 }
 .fonctionnement li {
   background-color: rgb(248, 248, 248);
-  padding: 1.2rem 2rem;
+  padding: 1.2rem;
   flex-grow: 1;
   border-radius: 1rem;
   box-shadow: 1px 1px 10px rgb(197, 197, 197);
@@ -160,12 +160,37 @@ footer .footer_margin a i {
 .restaurants_block {
   width: 90%;
   margin: auto;
-  margin-bottom: 20%;
+  padding-bottom: 8rem;
 }
 .restaurants_block h2 {
-  padding-top: 15%;
+  padding-top: 4rem;
 }
-.restaurants .nouveau {
+.restaurants_responsive {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+@media screen and (max-width: 900px) {
+  .restaurants_responsive {
+    grid-template-columns: 1fr;
+  }
+}
+.restaurants_cartes {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px rgb(197, 197, 197);
+  position: relative;
+}
+.restaurants_cartes:hover {
+  transform: scale(1.05);
+}
+.restaurants_cartes img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.restaurants_cartes .nouveau {
   background-color: #99e2d0;
   color: #33a385;
   width: 80px;
@@ -177,19 +202,6 @@ footer .footer_margin a i {
   position: absolute;
   top: 1rem;
   right: 0.75rem;
-}
-.restaurants_cartes {
-  background-color: white;
-  border-radius: 20px;
-  margin-bottom: 2rem;
-  box-shadow: 1px 1px 10px rgb(197, 197, 197);
-  position: relative;
-}
-.restaurants_cartes img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 20px 20px 0 0;
 }
 .restaurants_cartes_texte {
   width: 90%;
