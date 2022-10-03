@@ -330,6 +330,19 @@ footer .footer_margin a i {
   display: flex;
   height: 6rem;
   overflow: hidden;
+  animation: animation-appear 1s;
+}
+.menu li:nth-child(1) {
+  animation-delay: 100ms;
+}
+.menu li:nth-child(2) {
+  animation-delay: 200ms;
+}
+.menu li:nth-child(3) {
+  animation-delay: 300ms;
+}
+.menu li:nth-child(4) {
+  animation-delay: 400ms;
 }
 .menu li .prix {
   font-weight: bold;
@@ -373,6 +386,7 @@ footer .footer_margin a i {
 .menu li:hover i {
   animation: check-spin 1s;
 }
+
 @keyframes check-spin {
   0% {
     transform: rotate(-270deg);
@@ -381,7 +395,14 @@ footer .footer_margin a i {
     transform: rotate(0);
   }
 }
-
+@keyframes animation-appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .loader {
   background-color: whitesmoke;
   position: fixed;
