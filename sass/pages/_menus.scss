@@ -8,13 +8,17 @@
 .menu {
   position: relative;
   z-index: 1;
-  bottom: 50px;
+  bottom: 2rem;
   text-align: center;
   background-color: $fond;
   border-radius: 30px 30px 0 0;
   button {
     @include button;
     font-size: large;
+    cursor: pointer;
+    &:hover{
+      @include buttonHover;
+    }
   }
   &_margin {
     width: 90%;
@@ -50,56 +54,92 @@
         opacity: 0;
       }
     }
-    // i {
-    //   font-size: xx-large;
-    // }
     &_liste {
       font-size: large;
       text-decoration: underline $tertiaire 3px;
       text-align: start;
     }
   }
+
+  &_responsive{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+
+    @media screen and (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
   ul {
     text-align: left;
     padding: 0;
   }
-  li {
-    @include flexbox-row;
-    justify-content: space-between;
-    align-items: flex-end;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 1px 1px 10px rgb(197, 197, 197);
-    margin-bottom: 5%;
-    padding: 0 4% 0 4%;
-    i {
-      display: none;
-    }
-    p {
-      font-weight: bold;
-    }
 
-    .menu_texte {
-      line-height: 10%;
-      p {
-        font-weight: normal;
-        text-overflow: ellipsis;
-      }
-      h3 {
-        line-height: normal;
+  li {
+    background-color: white;
+    margin-bottom: 2rem;
+    @include box-shadow;
+    border-radius: 20px;
+    list-style: none;
+    display: flex;
+    height: 6rem;
+    overflow: hidden;
+
+    .prix {
+      font-weight: bold;
+      margin: 0;
+      margin-left: auto;
+      display: flex;
+      align-items: flex-end;
+      padding: 1rem;
+    }
+    .menu_texte{
+      margin-left: 1rem;
+      padding: 0.5rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 70%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      
+
+      h3, p{
+        margin: 0;
+        overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
       }
     }
-  }
-  li:hover {
-    i {
-      display: flex;
-      box-sizing: border-box;
-      color: white;
+    
+    .check{
       background-color: $tertiaire;
-      width: 10%;
-      height: 78px;
-      align-items: center;
-      justify-content: center;
+      color: white;
+      width: 4rem;
+      font-size: xx-large;
+      display: grid;
+      place-items: center;
+      border-radius: 0 20px 20px 0;
+      margin-right: -4rem;
+      transition: margin 0.5s;
+
+    }
+    &:hover {
+      .check{
+         margin: 0;
+      }
+      i{
+        animation: check-spin 1s;
+      } 
+    }
+    @keyframes check-spin {
+      0%{
+        transform: rotate(-270deg);
+      }
+      100%{
+        transform: rotate(0);
+      }
     }
   }
 }

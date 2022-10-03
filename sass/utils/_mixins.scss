@@ -21,6 +21,10 @@
   transform: scale(1.05);
 }
 
+@mixin box-shadow {
+  box-shadow: 1px 1px 10px rgb(197, 197, 197);
+}
+
 @mixin flexbox-row {
   display: flex;
   align-items: center;

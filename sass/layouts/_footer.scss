@@ -6,7 +6,7 @@ footer {
     @include flexbox-column;
     width: 90%;
     margin: auto;
-    padding-bottom: 5%;
+    padding-bottom: 3rem;
     h2 {
       @include police-logotitre;
       font-weight: lighter;
@@ -21,8 +21,7 @@ footer {
   @media screen and (min-width: 900px) {
       flex-direction: row;
       justify-content: space-between;
-       align-items: center;
-       
+      align-items: center;
       a{
         white-space: nowrap;
        }

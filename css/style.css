@@ -26,11 +26,15 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .header_menu a {
   font-size: x-large;
   position: absolute;
   left: 2rem;
+}
+.header_menu a:hover {
+  transform: scale(1.2);
 }
 
 footer {
@@ -42,7 +46,7 @@ footer .footer_margin {
   flex-direction: column;
   width: 90%;
   margin: auto;
-  padding-bottom: 5%;
+  padding-bottom: 3rem;
 }
 footer .footer_margin h2 {
   font-family: "Shrikhand", cursive;
@@ -241,7 +245,7 @@ footer .footer_margin a i {
 .menu {
   position: relative;
   z-index: 1;
-  bottom: 50px;
+  bottom: 2rem;
   text-align: center;
   background-color: rgb(248, 248, 248);
   border-radius: 30px 30px 0 0;
@@ -258,6 +262,10 @@ footer .footer_margin a i {
   margin-top: 1rem;
   transition: all 300ms;
   font-size: large;
+  cursor: pointer;
+}
+.menu button:hover {
+  transform: scale(1.05);
 }
 .menu_margin {
   width: 90%;
@@ -299,47 +307,79 @@ footer .footer_margin a i {
   text-decoration: underline #99e2d0 3px;
   text-align: start;
 }
+.menu_responsive {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+@media screen and (max-width: 900px) {
+  .menu_responsive {
+    grid-template-columns: 1fr;
+  }
+}
 .menu ul {
   text-align: left;
   padding: 0;
 }
 .menu li {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
   background-color: white;
-  border-radius: 20px;
+  margin-bottom: 2rem;
   box-shadow: 1px 1px 10px rgb(197, 197, 197);
-  margin-bottom: 5%;
-  padding: 0 4% 0 4%;
+  border-radius: 20px;
+  list-style: none;
+  display: flex;
+  height: 6rem;
+  overflow: hidden;
 }
-.menu li i {
-  display: none;
-}
-.menu li p {
+.menu li .prix {
   font-weight: bold;
+  margin: 0;
+  margin-left: auto;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
 }
 .menu li .menu_texte {
-  line-height: 10%;
-}
-.menu li .menu_texte p {
-  font-weight: normal;
+  margin-left: 1rem;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 70%;
+  overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.menu li .menu_texte h3 {
-  line-height: normal;
+.menu li .menu_texte h3, .menu li .menu_texte p {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu li .check {
+  background-color: #99e2d0;
+  color: white;
+  width: 4rem;
+  font-size: xx-large;
+  display: grid;
+  place-items: center;
+  border-radius: 0 20px 20px 0;
+  margin-right: -4rem;
+  transition: margin 0.5s;
+}
+.menu li:hover .check {
+  margin: 0;
 }
 .menu li:hover i {
-  display: flex;
-  box-sizing: border-box;
-  color: white;
-  background-color: #99e2d0;
-  width: 10%;
-  height: 78px;
-  align-items: center;
-  justify-content: center;
+  animation: check-spin 1s;
+}
+@keyframes check-spin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
 
 .loader {
