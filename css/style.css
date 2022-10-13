@@ -229,6 +229,7 @@ footer .footer_margin a i {
   -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
+  transition: 0.8s;
 }
 .restaurants_cartes_texte:hover .fa-solid {
   opacity: 1;
@@ -296,6 +297,7 @@ footer .footer_margin a i {
   -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
+  transition: 0.8s;
 }
 .menu_titre:hover .fa-solid {
   opacity: 1;

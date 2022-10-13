@@ -44,6 +44,7 @@
       -webkit-background-clip: text;
       color: transparent;
       opacity: 0;
+      transition:.8s;
     }
     &:hover {
       .fa-solid {
