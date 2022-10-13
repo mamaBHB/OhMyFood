@@ -6,19 +6,20 @@
 }
 
 @mixin button {
-  background-image: linear-gradient($secondaire, $primaire);
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 2rem;
-  box-shadow: 0px 0px 5px 0px #555555;
-  margin-top: 1rem;
-  transition: all 300ms;
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 100px;
+    color: #fff;
+    background-color: #686868;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 0px #555555;
+    transition: all 300ms;
 }
 @mixin buttonHover {
-  transform: scale(1.05);
+  background-color: #fff;
 }
 
 @mixin box-shadow {

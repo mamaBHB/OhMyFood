@@ -15,7 +15,6 @@
   button {
     @include button;
     font-size: large;
-    cursor: pointer;
     &:hover{
       @include buttonHover;
     }
@@ -80,7 +79,7 @@
   li {
     background-color: white;
     margin-bottom: 2rem;
-    width: 95%;
+    width: 90%;
     @include box-shadow;
     border-radius: 20px;
     list-style: none;
